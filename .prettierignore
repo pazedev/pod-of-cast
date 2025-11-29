@@ -1,0 +1,18 @@
+# Dependências
+node_modules
+
+# Build
+dist
+build
+
+# Cache
+.cache
+
+# Logs
+*.log
+
+# Outros
+.env
+.env.local
+.env.production
+coverage

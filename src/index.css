@@ -26,4 +26,14 @@
   .button-outline {
     @apply px-6 py-2 text-sm font-bold rounded-lg bg-transparent text-black border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] hover:bg-black hover:text-white hover:border-2 hover:border-black hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none relative uppercase tracking-wide cursor-pointer;
   }
+  a {
+    @apply text-black hover:text-font-Vermillion;
+  }
+  a:visited {
+    @apply text-font-Vermillion;
+  }
+  strong {
+    @apply text-font-Vermillion font-bold;
+  
+  }
 }

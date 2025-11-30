@@ -80,19 +80,20 @@ export default function Footer() {
                 />
               </a>
             </div>
-          
           </div>
           <div className="flex flex-col gap-2">
-              <p className="text-left">App available on:</p>
-              <div className="flex flex-row gap-[0.94rem]">
-                <img src="/src/assets/app_store.png" alt="Logo AppStore" />
-                <img src="/src/assets/google_play.svg" alt="Logo GoogePlay" />
+            <p className="text-left">App available on:</p>
+            <div className="flex flex-row gap-[0.94rem]">
+              <img src="/src/assets/app_store.png" alt="Logo AppStore" />
+              <img src="/src/assets/google_play.svg" alt="Logo GoogePlay" />
+            </div>
           </div>
         </div>
       </div>
-      </div>
       <div className="w-full flex flex-col sm:flex-row justify-between border-t pt-6 border-gray-400">
-        <p>&copy;2022. All Rights Reserved. <strong>Pod of Cast.</strong></p>
+        <p>
+          &copy;2022. All Rights Reserved. <strong>Pod of Cast.</strong>
+        </p>
         <div className="flex flex-row gap-4">
           <a href="#">Terms</a>
           <span>.</span>
@@ -100,5 +101,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

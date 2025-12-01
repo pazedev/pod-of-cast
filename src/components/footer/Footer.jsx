@@ -1,104 +1,73 @@
+import { Fragment } from 'react'
+import Logo from '../Logo'
+import SocialLinks from '../SocialLinks'
+import PlatformLinks from '../PlatformLinks'
+import {
+  BRANDING,
+  FOOTER_NAVIGATION,
+  LEGAL_LINKS,
+  APP_STORES,
+} from '../../constants'
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="w-full flex flex-col gap-35 py-20 px-10 justify-center items-center md:pt-30 md:px-20">
-      <div className="w-full flex flex-col gap-10 justify-center items-center sm:flex-wrap sm:justify-between md:items-start md:flex-row">
-        <div className="flex flex-col gap-14">
-          <div className="w-48 md flex flex-col gap-4">
-            <div className="flex flex-row items-end justify-between">
-              <img
-                src="/src/assets/logo.png"
-                alt="Logo PodOfCast"
-                width="74px"
-                height="74px"
-              />
-              <span>&copy; 2021</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-          </div>
-          <div className="flex flex-row gap-[25px] justify-center sm:justify-start">
-            <a href="#">
-              <img
-                src="/src/assets/twitter.png"
-                alt="Logo Twitter"
-                width="24px"
-                height="24px"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="/src/assets/instagram.png"
-                alt="Logo Instagram"
-                width="24px"
-                height="24px"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="/src/assets/tiktok.png"
-                alt="Logo Tiktok"
-                width="24px"
-                height="24px"
-              />
-            </a>
-          </div>
+    <footer className="w-full flex flex-col gap-20 md:gap-35 py-20 px-10 justify-center items-center md:pt-30 md:px-20">
+      <div className="w-full flex flex-col gap-10 md:gap-10 justify-center items-center sm:flex-wrap sm:justify-between md:items-start md:flex-row">
+        <div className="flex flex-col gap-12 md:gap-14 order-1 md:order-0">
+          <Logo />
+          <SocialLinks />
         </div>
-        <div className="flex flex-row gap-25">
-          <div className="flex flex-col gap-[0.69rem] ">
-            <a href="#">About</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Features</a>
-          </div>
-          <div className="flex flex-col gap-[0.69rem]">
-            <a href="#">Episodes</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog</a>
-          </div>
-        </div>
-        <div className="flex flex-col gap-10 items-center sm:items-start">
-          <div className="flex flex-col gap-7 items-center sm:items-start">
-            <p className="text-left">Listen episodes on your fav platform:</p>
-            <div className="flex flex-row gap-6 w-[373px] h-[22px] sm:gap-9 items-center justify-center">
-              <a href="#">
-                <img
-                  src="/src/assets/Google_Podcast.png"
-                  alt="Logo Google podcasts"
-                  width="122px"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="/src/assets/Spotify.png"
-                  alt="Logo spotify"
-                  width="80px"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="/src/assets/Youtube.png"
-                  alt="Logo YouTube"
-                  width="94px"
-                />
-              </a>
+
+        <nav
+          className="flex flex-row gap-25 text-body-medium order-2 md:order-0 mt-6 md:mt-0"
+          aria-label="Footer navigation"
+        >
+          {FOOTER_NAVIGATION.map((links, index) => (
+            <div key={index} className="flex flex-col gap-[0.69rem]">
+              {links.map(({ href, label }) => (
+                <a key={href} href={href} aria-label={`Navigate to ${label}`}>
+                  {label}
+                </a>
+              ))}
             </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-left">App available on:</p>
+          ))}
+        </nav>
+
+        <div className="flex flex-col text-body-medium text-davys-grey gap-10 items-center sm:items-start order-3 md:order-0 mt-6 md:mt-0">
+          <PlatformLinks />
+
+          <div className="flex flex-col gap-2 items-center md:items-start">
+            <p className="text-left">{BRANDING.footer.appAvailableText}</p>
             <div className="flex flex-row gap-[0.94rem]">
-              <img src="/src/assets/app_store.png" alt="Logo AppStore" />
-              <img src="/src/assets/google_play.svg" alt="Logo GoogePlay" />
+              {APP_STORES.map(({ id, name, icon, url }) => (
+                <a key={id} href={url} aria-label={`Download on ${name}`}>
+                  <img src={icon} alt={`Logo ${name}`} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col sm:flex-row justify-between border-t pt-6 border-gray-400">
+
+      <div className="w-full flex flex-col sm:flex-row justify-between border-t pt-6 border-davys-grey text-small-medium text-davys-grey gap-4 items-center">
         <p>
-          &copy;2022. All Rights Reserved. <strong>Pod of Cast.</strong>
+          &copy;{currentYear}. All Rights Reserved.{' '}
+          <strong>{BRANDING.copyright.company}</strong>
         </p>
-        <div className="flex flex-row gap-4">
-          <a href="#">Terms</a>
-          <span>.</span>
-          <a href="#">Privacy</a>
-        </div>
+        <nav className="flex flex-row gap-4" aria-label="Legal links">
+          {LEGAL_LINKS.map(({ href, label }, index) => (
+            <Fragment key={href}>
+              <a href={href} aria-label={`View ${label}`}>
+                {label}
+              </a>
+              {index < LEGAL_LINKS.length - 1 && (
+                <span aria-hidden="true">•</span>
+              )}
+            </Fragment>
+          ))}
+        </nav>
       </div>
     </footer>
   )

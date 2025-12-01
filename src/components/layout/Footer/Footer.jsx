@@ -1,13 +1,13 @@
 import { Fragment } from 'react'
-import Logo from '../Logo'
-import SocialLinks from '../SocialLinks'
-import PlatformLinks from '../PlatformLinks'
+import Logo from '../../Logo'
+import SocialLinks from '../../SocialLinks'
+import PlatformLinks from '../../PlatformLinks'
 import {
   BRANDING,
   FOOTER_NAVIGATION,
   LEGAL_LINKS,
   APP_STORES,
-} from '../../constants'
+} from '../../../constants'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()

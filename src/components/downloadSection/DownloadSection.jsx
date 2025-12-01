@@ -2,27 +2,28 @@ import { SubscribeButton } from '../SubscribeButton'
 
 export default function DownloadSection() {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-[645px] sm:min-h-screen w-full bg-background-AliceBlue overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-background-AliceBlue overflow-hidden">
+      <img
+        src="/src/assets/vector-download-section1.png"
+        alt=""
+        width="373px"
+        class="hidden md:block absolute -left-16 top-88  pointer-events-none select-none"
+      />
       <img
         src="/src/assets/vector-download-section2.png"
-        alt="Ilustração de interface de aplicativo mostrando tópicos em alta, episódios recentes e sugestões para o usuário"
+        alt=""
         width="490px"
-        className="hidden lg:block absolute -right-55 top-50  pointer-events-none select-none"
-      />
-      <img
-        src="/src/assets/scribble-icon-red.png"
-        alt="Linha curva vermelha"
-        className="absolute left-1.5/3 -top-1/8 pointer-events-none select-none"
+        class="hidden md:block absolute -right-55 top-50  pointer-events-none select-none"
       />
 
-      <div className="flex flex-col items-center justify-between gap-10 pb-25">
+      <div className="flex flex-col items-center justify-between gap-10">
         <span className="text-font-Vermillion font-bold border border-font-Vermillion rounded-lg p-1">
           BETA
         </span>
         <h1 className="w-80 sm:w-140 text-center">
           Available now Pod of Cast App
         </h1>
-        <h3>We just launched our podcast app!</h3>
+        <p>We just launched our podcast app!</p>
         <SubscribeButton text="Download now" />
         <p>Content also available on:</p>
         <div className="flex flex-row gap-5">
@@ -40,12 +41,6 @@ export default function DownloadSection() {
           </a>
         </div>
       </div>
-      <img
-        src="/src/assets/vector-download-section1.png"
-        alt="Ilustração de interface de aplicativo mostrando tópicos em alta, episódios recentes e sugestões para o usuário"
-        width="373px"
-        className="absolute -left-16 top-120 sm:top-100 sm:-left-50 pointer-events-none select-none"
-      />
     </div>
   )
 }

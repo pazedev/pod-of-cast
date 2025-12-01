@@ -35,4 +35,7 @@
   strong {
     @apply text-font-Vermillion font-bold;
   }
+  h1 {
+    @apply text-4xl md:text-6xl font-bold;
+  }
 }

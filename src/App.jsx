@@ -1,5 +1,5 @@
-import Footer from './components/footer/Footer'
-import { SubscribeButton } from './components/SubscribeButton'
+import Footer from './components/layout/footer/Footer.jsx'
+import { SubscribeButton } from './components/UI/SubscribeButton'
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import Logo from '../../Logo'
+import Logo from '../Logo'
 import SocialLinks from '../../SocialLinks'
 import PlatformLinks from '../../PlatformLinks'
 import {

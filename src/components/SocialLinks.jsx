@@ -1,4 +1,4 @@
-import { SOCIAL_NETWORKS } from '../constants/socialNetworks'
+import { SOCIAL_NETWORKS } from '../constants/social-networks'
 
 export default function SocialLinks() {
   return (

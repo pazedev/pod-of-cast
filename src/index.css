@@ -23,6 +23,7 @@
   --tracking-tight: -0.25em;
   --tracking-default: -0.125em;
 }
+
 :root {
   font-family: var(--font-base-font);
 }

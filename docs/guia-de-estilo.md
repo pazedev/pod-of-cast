@@ -149,12 +149,12 @@ As classes estão definidas no arquivo `index.css`:
 
 ```css
 .button-black {
-  @apply bg-vermillion text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition;
-}
+    @apply px-6 py-2 text-sm font-bold rounded-lg border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none uppercase tracking-wide bg-black text-white hover:bg-transparent hover:text-black;
+  }
 
-.button-outline {
-  @apply border-2 border-vermillion text-vermillion font-bold py-3 px-6 rounded-lg hover:bg-vermillion hover:text-white transition;
-}
+  .button-outline {
+    @apply px-6 py-2 text-sm font-bold rounded-lg border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none uppercase tracking-wide bg-transparent text-black hover:bg-black hover:text-white;
+  }
 ```
 
 ### 📝 Como Usar

@@ -114,4 +114,7 @@
   h1 {
     @apply text-4xl md:text-6xl font-bold;
   }
+  h3 {
+    @apply text-base md:text-xl;
+  }
 }

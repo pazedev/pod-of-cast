@@ -3,36 +3,110 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-DavysGrey: #4d4d4d;
-  --color-font-Vermillion: #cd4631;
-  --color-PewterBlue: #81adc8;
-  --color-background-Champagne: #f7ede8;
-  --color-background-AliceBlue: #edf3f7;
-  --color-shadow-button: rgba(0, 0, 0, 0.25);
+  /* === Paleta de Cores === */
+  --color-davys-grey: #4d4d4d;
+  --color-vermillion: #cd4631;
+  --color-pewter-blue: #81adc8;
+  --color-champagne: #f7ede8;
+  --color-alice-blue: #edf3f7;
 
+  /* === Tipografia === */
   --font-base-font: 'Montserrat Alternates', sans-serif;
+
+  /* Tamanhos de fonte customizados */
+  --font-size-display: 6rem;
+  --font-size-h1: 3.70625rem;
+  --font-size-h2: 2.290625rem;
+  --font-size-h3: 1.415625rem;
+
+  /* Espaçamento de letras customizados */
+  --tracking-tight: -0.25em;
+  --tracking-default: -0.125em;
 }
+
 :root {
   font-family: var(--font-base-font);
 }
 
 @layer base {
-  .cover-font {
-    @apply font-bold text-7xl;
+  /* === Tipografia === */
+
+  .text-display {
+    font-size: var(--font-size-display);
+    letter-spacing: var(--tracking-tight);
+    @apply font-bold leading-none;
   }
+
+  .text-h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: var(--tracking-default);
+    @apply font-bold leading-tight;
+  }
+
+  .text-h2-style-1 {
+    font-size: var(--font-size-h2);
+    letter-spacing: var(--tracking-default);
+    @apply font-bold leading-none;
+  }
+
+  .text-h2-style-2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: var(--tracking-default);
+    @apply font-bold leading-snug;
+  }
+
+  .text-h3-style-1 {
+    font-size: var(--font-size-h3);
+    @apply font-medium leading-relaxed tracking-normal;
+  }
+
+  .text-h3-style-2 {
+    font-size: var(--font-size-h3);
+    letter-spacing: var(--tracking-default);
+    @apply font-bold leading-snug;
+  }
+
+  .text-body-medium {
+    @apply text-base font-medium leading-relaxed tracking-normal;
+  }
+
+  .text-body-bold {
+    @apply text-base font-bold leading-relaxed tracking-normal;
+  }
+
+  .text-caption-medium {
+    @apply text-sm font-medium leading-relaxed tracking-normal;
+  }
+
+  .text-caption-bold {
+    @apply text-sm font-bold leading-relaxed tracking-normal;
+  }
+
+  .text-small-medium {
+    @apply text-xs font-medium leading-relaxed tracking-normal;
+  }
+
+  .text-small-bold {
+    @apply text-xs font-bold leading-relaxed tracking-normal;
+  }
+
+  /* === Botões === */
+
   .button-black {
-    @apply px-6 py-2 text-sm font-bold rounded-lg bg-black text-white border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] hover:bg-transparent hover:text-black hover:border-2 hover:border-black hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none relative uppercase tracking-wide;
+    @apply px-6 py-2 text-sm font-bold rounded-lg border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none uppercase tracking-wide bg-black text-white hover:bg-transparent hover:text-black;
   }
+
   .button-outline {
-    @apply px-6 py-2 text-sm font-bold rounded-lg bg-transparent text-black border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] hover:bg-black hover:text-white hover:border-2 hover:border-black hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none relative uppercase tracking-wide cursor-pointer;
+    @apply px-6 py-2 text-sm font-bold rounded-lg border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none uppercase tracking-wide bg-transparent text-black hover:bg-black hover:text-white;
   }
+
+  /* === Elementos Globais === */
+
   a {
-    @apply text-black hover:text-font-Vermillion;
+    @apply text-black hover:text-vermillion transition-colors;
   }
-  a:visited {
-    @apply text-font-Vermillion;
-  }
+
   strong {
-    @apply text-font-Vermillion font-bold;
+    @apply text-vermillion;
   }
 }

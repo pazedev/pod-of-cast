@@ -5,23 +5,29 @@ export const PODCAST_PLATFORMS = [
   {
     id: 'google-podcasts',
     name: 'Google Podcasts',
-    icon: '/src/assets/Google_Podcast.png',
+    icon: '/src/assets/google-podcast.png',
+    logo: '/src/assets/mini-google-podcast.svg',
     url: 'https://podcasts.google.com',
     width: 122,
+    logoWidth: 24,
   },
   {
     id: 'spotify',
     name: 'Spotify',
-    icon: '/src/assets/Spotify.png',
+    icon: '/src/assets/spotify.png',
+    logo: '/src/assets/mini-spotify.svg',
     url: 'https://spotify.com',
     width: 80,
+    logoWidth: 24,
   },
   {
     id: 'youtube',
     name: 'YouTube',
-    icon: '/src/assets/Youtube.png',
+    icon: '/src/assets/youtube.png',
+    logo: '/src/assets/mini-youtube.svg',
     url: 'https://youtube.com',
     width: 94,
+    logoWidth: 24,
   },
 ]
 
@@ -32,13 +38,13 @@ export const APP_STORES = [
   {
     id: 'app-store',
     name: 'App Store',
-    icon: '/src/assets/app_store.png',
+    icon: '/src/assets/app-store.png',
     url: 'https://apps.apple.com',
   },
   {
     id: 'google-play',
     name: 'Google Play',
-    icon: '/src/assets/google_play.svg',
+    icon: '/src/assets/google-play.svg',
     url: 'https://play.google.com',
   },
 ]

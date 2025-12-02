@@ -9,11 +9,11 @@ import {
   APP_STORES,
 } from '../../../constants'
 
-export default function Footer() {
+export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="w-full flex flex-col gap-20 md:gap-35 py-20 px-10 justify-center items-center md:pt-30 md:px-20">
+    <footer className="w-full flex flex-col gap-20 md:gap-32 py-20 px-10 justify-center items-center md:pt-32 md:px-20">
       <div className="w-full flex flex-col gap-10 md:gap-10 justify-center items-center sm:flex-wrap sm:justify-between md:items-start md:flex-row">
         <div className="flex flex-col gap-12 md:gap-14 order-1 md:order-0">
           <Logo />
@@ -21,11 +21,12 @@ export default function Footer() {
         </div>
 
         <nav
-          className="flex flex-row gap-25 text-body-medium order-2 md:order-0 mt-6 md:mt-0"
+          className="flex flex-row gap-24 text-body-medium order-2 md:order-0 mt-6 md:mt-0"
           aria-label="Footer navigation"
         >
-          {FOOTER_NAVIGATION.map((links, index) => (
-            <div key={index} className="flex flex-col gap-[0.69rem]">
+          {FOOTER_NAVIGATION.map(links => (
+            <div key={links[0].href} className="flex flex-col gap-[0.69rem]">
+              {' '}
               {links.map(({ href, label }) => (
                 <a key={href} href={href} aria-label={`Navigate to ${label}`}>
                   {label}
@@ -43,7 +44,11 @@ export default function Footer() {
             <div className="flex flex-row gap-[0.94rem]">
               {APP_STORES.map(({ id, name, icon, url }) => (
                 <a key={id} href={url} aria-label={`Download on ${name}`}>
-                  <img src={icon} alt={`Logo ${name}`} />
+                  <img
+                    src={icon}
+                    alt={`Logo ${name}`}
+                    className="w-9 h-9 object-contain"
+                  />
                 </a>
               ))}
             </div>

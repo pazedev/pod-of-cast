@@ -85,8 +85,11 @@ export function Navbar() {
 
           {/* Botões Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <SubscribeButton text="RECENT EPISODES" variant="outlineMobile" />
-            <SubscribeButton text="SUBSCRIBE" variant="mobile" />
+            <SubscribeButton
+              text="RECENT EPISODES"
+              variant="outlineDesktopNavbar"
+            />
+            <SubscribeButton text="SUBSCRIBE" variant="desktopNavbar" />
           </div>
 
           {/* Botão Hamburger Mobile */}

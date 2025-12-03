@@ -1,11 +1,19 @@
 export const SubscribeButton = ({ text, variant = 'desktop', onClick }) => {
   const variants = {
+    // Main buttons
     desktop:
-      'button-black md:px-8 md:py-3 md:text-base lg:px-12 lg:py-6 lg:text-lg',
-    mobile: 'button-black px-8 py-4 text-sm',
+      'button-black md:px-8 md:py-3 md:text-base lg:px-12 lg:py-6 lg:text-lg shadow-sm',
+    mobile: 'button-black px-8 py-4 text-sm shadow-sm',
+
+    // Buttons in navbar (smaller size and no shadow)
+    desktopNavbar: 'button-black shadow-none lg:px-6 lg:py-2 lg:text-sm',
+    outlineDesktopNavbar:
+      'button-outline shadow-none lg:px-6 lg:py-2 lg:text-sm',
+
+    // Outline buttons
     outlineDesktop:
-      'button-outline md:px-8 md:py-3 md:text-base lg:px-12 lg:py-6 lg:text-lg',
-    outlineMobile: 'button-outline px-8 py-4 text-sm',
+      'button-outline md:px-8 md:py-3 md:text-base lg:px-12 lg:py-6 lg:text-lg shadow-sm',
+    outlineMobile: 'button-outline px-8 py-4 text-sm shadow-sm',
   }
 
   return (

@@ -11,7 +11,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="navbar text-gray-800 mt-6">
+    <nav className="navbar text-gray-800 mt-6">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -85,11 +85,8 @@ export function Navbar() {
 
           {/* Botões Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <SubscribeButton
-              text="RECENT EPISODES"
-              variant="outlineDesktopNavbar"
-            />
-            <SubscribeButton text="SUBSCRIBE" variant="desktopNavbar" />
+            <SubscribeButton text="RECENT EPISODES" variant="outlineNavbar" />
+            <SubscribeButton text="SUBSCRIBE" variant="navbar" />
           </div>
 
           {/* Botão Hamburger Mobile */}
@@ -97,6 +94,8 @@ export function Navbar() {
             onClick={toggleMenu}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 focus:outline-none"
             aria-label="Menu"
+            aria-controls="mobile-menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <svg
@@ -133,46 +132,47 @@ export function Navbar() {
 
       {/* Menu Mobile */}
       <div
+        id="mobile-menu"
         className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 pt-2 pb-4 space-y-1 bg-[#dcc5bf]">
+        <div className="px-6 pt-2 pb-4 space-y-3">
           <a
             href="/episodes"
-            className="block px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            className="block px-4 py-3 rounded-lg transition-colors duration-200"
             onClick={toggleMenu}
           >
             Episodes
           </a>
           <a
             href="/about"
-            className="block px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            className="block px-4 py-3 rounded-lg transition-colors duration-200"
             onClick={toggleMenu}
           >
             About
           </a>
           <a
             href="/hosts"
-            className="block px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            className="block px-4 py-3 rounded-lg transition-colors duration-200"
             onClick={toggleMenu}
           >
             Hosts
           </a>
           <a
             href="/contact"
-            className="block px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            className="block px-4 py-3 rounded-lg transition-colors duration-200"
             onClick={toggleMenu}
           >
             Contact
           </a>
 
-          <div className="hidden lg:flex items-center space-x-4">
-            <SubscribeButton text="RECENT EPISODES" variant="outlineMobile" />
-            <SubscribeButton text="SUBSCRIBE" variant="mobile" />
+          <div className="flex lg:hidden items-center px-4 pt-2 space-x-4">
+            <SubscribeButton text="RECENT EPISODES" variant="outlineNavbar" />
+            <SubscribeButton text="SUBSCRIBE" variant="navbar" />
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   )
 }

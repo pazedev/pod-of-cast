@@ -6,9 +6,8 @@ export const SubscribeButton = ({ text, variant = 'desktop', onClick }) => {
     mobile: 'button-black px-8 py-4 text-sm shadow-sm',
 
     // Buttons in navbar (smaller size and no shadow)
-    desktopNavbar: 'button-black shadow-none lg:px-6 lg:py-2 lg:text-sm',
-    outlineDesktopNavbar:
-      'button-outline shadow-none lg:px-6 lg:py-2 lg:text-sm',
+    navbar: 'button-black shadow-none lg:px-6 lg:py-2 lg:text-sm',
+    outlineNavbar: 'button-outline shadow-none lg:px-6 lg:py-2 lg:text-sm',
 
     // Outline buttons
     outlineDesktop:

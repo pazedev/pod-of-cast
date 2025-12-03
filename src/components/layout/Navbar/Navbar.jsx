@@ -11,7 +11,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="navbar text-gray-800 mt-6">
+    <nav className="navbar text-davys-grey mt-6">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -25,13 +25,13 @@ export function Navbar() {
           <div className="hidden lg:flex items-center space-x-8">
             <a
               href="/episodes"
-              className="text-gray-800 hover:text-gray-600 transition-colors duration-200 font-medium"
+              className="text-davys-grey hover:text-vermillion transition-colors duration-200 font-medium"
             >
               Episodes
             </a>
             <a
               href="/about"
-              className="text-gray-800 hover:text-gray-600 transition-colors duration-200 font-medium"
+              className="text-davys-grey hover:text-vermillion transition-colors duration-200 font-medium"
             >
               About
             </a>
@@ -40,7 +40,7 @@ export function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setIsMoreOpen(!isMoreOpen)}
-                className="flex items-center text-gray-800 hover:text-gray-600 transition-colors duration-200 font-medium"
+                className="flex items-center text-davys-grey hover:text-vermillion transition-colors duration-200 font-medium cursor-pointer"
               >
                 More
                 <svg
@@ -62,19 +62,19 @@ export function Navbar() {
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
                   <a
                     href="/hosts"
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"
                   >
                     Hosts
                   </a>
                   <a
                     href="/contact"
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"
                   >
                     Contact
                   </a>
                   <a
                     href="/faq"
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"
                   >
                     FAQ
                   </a>

@@ -12,7 +12,7 @@ export function Navbar() {
 
   return (
     <nav className="navbar text-davys-grey mt-6">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-8 lg:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -92,7 +92,7 @@ export function Navbar() {
           {/* Botão Hamburger Mobile */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 focus:outline-none"
+            className="lg:hidden p-2 rounded-lg hover:bg-davys-grey transition-colors duration-200 focus:outline-none"
             aria-label="Menu"
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
@@ -167,7 +167,7 @@ export function Navbar() {
             Contact
           </a>
 
-          <div className="flex lg:hidden items-center px-4 pt-2 space-x-4">
+          <div className="flex flex-col lg:hidden items-center px-4 pt-2 gap-4 items-start">
             <SubscribeButton text="RECENT EPISODES" variant="outlineNavbar" />
             <SubscribeButton text="SUBSCRIBE" variant="navbar" />
           </div>

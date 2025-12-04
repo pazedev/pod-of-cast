@@ -1,6 +1,7 @@
 import { LandingPage } from './pages/Landing/LandingPage'
 import { Footer } from './components/layout/Footer/Footer'
 import { SubscribeButton } from './components/UI/SubscribeButton'
+import DownloadSection from './components/layout/Download/Download.jsx'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <div className="flex justify-center py-8">
           <SubscribeButton text="Subscribe" />
         </div>
+        <DownloadSection />
       </main>
       <Footer />
     </div>

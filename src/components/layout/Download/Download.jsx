@@ -3,7 +3,12 @@ import { PODCAST_PLATFORMS } from '../../../constants/platforms.js'
 
 export default function DownloadSection() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center h-[816px]  border-b border-davys-grey bg-alice-blue">
+    <div className="flex flex-col lg:flex-row items-center justify-center h-[816px] border-b border-davys-grey bg-alice-blue relative">
+      <img
+        src="/src/assets/sparkle-icon.svg"
+        alt="Imagem ilustrativa de uma tela de celular"
+        className="hidden lg:block absolute top-1/2 left-10/17"
+      />
       <div className="hidden lg:block overflow-hidden lg:w-1/3 h-full">
         <img
           src="/src/assets/vector-1.png"

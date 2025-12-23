@@ -1,13 +1,34 @@
-import { SOCIAL_NETWORKS } from '../constants/social-networks'
+import { FaTwitter } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FaTiktok } from 'react-icons/fa6'
 
 export default function SocialLinks() {
   return (
     <div className="flex flex-row gap-[25px] justify-center sm:justify-start">
-      {SOCIAL_NETWORKS.map(({ id, name, url, icon }) => (
-        <a key={id} href={url} aria-label={name}>
-          <img src={icon} alt={`Logo ${name}`} className="w-6 h-6" />
-        </a>
-      ))}
+      <a
+        href="https://twitter.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Link para Twitter"
+      >
+        <FaTwitter size={24} className="social-platforms-icons" />
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Link para Instagram"
+      >
+        <FaInstagram size={24} className="social-platforms-icons" />
+      </a>
+      <a
+        href="https://tiktok.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Link para TikTok"
+      >
+        <FaTiktok size={24} className="social-platforms-icons" />
+      </a>
     </div>
   )
 }

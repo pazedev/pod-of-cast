@@ -1,28 +1,30 @@
+import { PiGooglePodcastsLogoBold } from 'react-icons/pi'
+import { SiSpotify } from 'react-icons/si'
+import { FaYoutube } from 'react-icons/fa'
 import { SubscribeButton } from '../../UI/SubscribeButton.jsx'
-import { PODCAST_PLATFORMS } from '../../../constants/platforms.js'
 
 export default function DownloadSection() {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center h-[816px] border-b border-davys-grey bg-alice-blue relative">
       <img
-        src="/src/assets/sparkle-icon.svg"
-        alt="Imagem ilustrativa de uma tela de celular"
-        className="hidden lg:block absolute top-1/2 left-10/17"
+        src="/src/assets/scribble-icon-red.png"
+        alt="Imagem de uma linha vermelha"
+        className="absolute -translate-y-100 h-[123px] lg:h-[150px]"
       />
       <div className="hidden lg:block overflow-hidden lg:w-1/3 h-full">
         <img
           src="/src/assets/vector-1.png"
           alt="Imagem ilustrativa de uma tela de celular"
-          className="w-[373px] max-w-none -translate-x-1/5 translate-y-3/5"
+          className="w-[410px] max-w-none -translate-x-2/6 translate-y-3/6 xl:-translate-x-1/6 xl:w-[450px]"
         />
       </div>
 
-      <div className="flex flex-col items-center justify-between gap-18 pb-2 sm:h-full sm:w-full lg:w-1/3 lg:h-[600px]">
-        <span className="text-vermillion text-caption-bold border border-vermillion rounded-lg p-1">
+      <div className="flex flex-col items-center justify-center gap-16 pt-24 pb-4 sm:h-full sm:w-full lg:w-1/3 lg:h-[816px]">
+        <span className="text-center text-vermillion text-caption-bold border border-vermillion rounded-lg p-1">
           BETA
         </span>
         <div className="flex flex-col items-center gap-5">
-          <h1 className="w-80 sm:w-140 text-center text-h1">
+          <h1 className="w-86 text-h1 text-center sm:w-140">
             Available now Pod of Cast App
           </h1>
           <h3 className="text-h3-style-1 text-center">
@@ -37,15 +39,33 @@ export default function DownloadSection() {
             Content also available on:
           </p>
           <div className="flex justify-center gap-5">
-            {PODCAST_PLATFORMS.map(({ id, name, logo, icon }) => (
-              <img
-                key={id}
-                src={logo ?? icon}
-                alt={name}
-                title={`Available on ${name}`}
-                className="object-contain p-1 w-8 h-8 invert"
+            <a
+              href="https://podcasts.google.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Avaliable on Google Podcast"
+            >
+              <PiGooglePodcastsLogoBold
+                size={24}
+                className="social-platforms-icons"
               />
-            ))}
+            </a>
+            <a
+              href="https://spotify.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Avaliable on Spotify"
+            >
+              <SiSpotify size={24} className="social-platforms-icons" />
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Avaliable on Youtube"
+            >
+              <FaYoutube size={24} className="social-platforms-icons" />
+            </a>
           </div>
         </div>
       </div>
@@ -54,7 +74,7 @@ export default function DownloadSection() {
         <img
           src="/src/assets/vector-2.png"
           alt="Imagem ilustrativa de uma tela de celular"
-          className="ml-auto md:translate-x-1/3 lg:translate-x-2/6 lg:translate-y-3/6 lg:max-w-none lg:w-[480px]"
+          className="ml-auto lg:translate-x-2/6 lg:translate-y-1/6 lg:max-w-none lg:w-[550px]"
         />
       </div>
     </div>

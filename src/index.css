@@ -13,15 +13,21 @@
   /* === Tipografia === */
   --font-base-font: 'Montserrat Alternates', sans-serif;
 
+  /* Tamanhos de fonte customizados - Mobile */
+  --text-size-display-mobile: 4.5rem;
+  --text-size-h1-mobile: 2.5rem;
+  --text-size-h2-mobile: 1.25rem;
+  --text-size-h3-mobile: 1rem;
+
   /* Tamanhos de fonte customizados */
-  --font-size-display: 6rem;
-  --font-size-h1: 3.70625rem;
-  --font-size-h2: 2.290625rem;
-  --font-size-h3: 1.415625rem;
+  --text-size-display: 6rem;
+  --text-size-h1: 3.70625rem;
+  --text-size-h2: 2.290625rem;
+  --text-size-h3: 1.415625rem;
 
   /* Espaçamento de letras customizados */
-  --tracking-tight: -0.25em;
-  --tracking-default: -0.125em;
+  --tracking-tight: -0.025em;
+  --tracking-default: -0.0125em;
 }
 
 :root {
@@ -32,60 +38,43 @@
   /* === Tipografia === */
 
   .text-display {
-    font-size: var(--font-size-display);
+    @apply font-bold leading-none text-size-display-mobile sm:text-size-display;
     letter-spacing: var(--tracking-tight);
-    @apply font-bold leading-none;
   }
-
   .text-h1 {
-    font-size: var(--font-size-h1);
-    letter-spacing: var(--tracking-default);
-    @apply font-bold leading-tight;
+    @apply font-bold leading-tight text-size-h1-mobile sm:text-size-h1;
+    letter-spacing: var(--tracking-tight);
   }
-
   .text-h2-style-1 {
-    font-size: var(--font-size-h2);
+    @apply font-bold text-size-h2-mobile leading-none sm:text-size-h2;
     letter-spacing: var(--tracking-default);
-    @apply font-bold leading-none;
   }
-
   .text-h2-style-2 {
-    font-size: var(--font-size-h2);
+    @apply font-bold leading-snug text-size-h2-mobile sm:text-size-h2;
     letter-spacing: var(--tracking-default);
-    @apply font-bold leading-snug;
   }
-
   .text-h3-style-1 {
-    font-size: var(--font-size-h3);
-    @apply font-medium leading-relaxed tracking-normal;
+    @apply font-medium leading-relaxed tracking-normal text-size-h3-mobile sm:text-size-h3;
   }
-
   .text-h3-style-2 {
-    font-size: var(--font-size-h3);
+    @apply font-bold leading-snug text-size-h3-mobile sm:text-size-h3;
     letter-spacing: var(--tracking-default);
-    @apply font-bold leading-snug;
   }
-
   .text-body-medium {
     @apply text-base font-medium leading-relaxed tracking-normal;
   }
-
   .text-body-bold {
     @apply text-base font-bold leading-relaxed tracking-normal;
   }
-
   .text-caption-medium {
     @apply text-sm font-medium leading-relaxed tracking-normal;
   }
-
   .text-caption-bold {
     @apply text-sm font-bold leading-relaxed tracking-normal;
   }
-
   .text-small-medium {
     @apply text-xs font-medium leading-relaxed tracking-normal;
   }
-
   .text-small-bold {
     @apply text-xs font-bold leading-relaxed tracking-normal;
   }
@@ -98,6 +87,10 @@
 
   .button-outline {
     @apply px-6 py-2 text-sm font-bold rounded-lg border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none uppercase tracking-wide bg-transparent text-black hover:bg-black hover:text-white;
+  }
+
+  .social-platforms-icons {
+    @apply text-black hover:text-vermillion;
   }
 
   /* === Elementos Globais === */

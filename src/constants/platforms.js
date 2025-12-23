@@ -14,7 +14,7 @@ export const PODCAST_PLATFORMS = [
   {
     id: 'spotify',
     name: 'Spotify',
-    icon: '/src/assets/spotify.png',
+    icon: '/src/assets/Spotify.png',
     logo: '/src/assets/mini-spotify.svg',
     url: 'https://spotify.com',
     width: 80,
@@ -23,7 +23,7 @@ export const PODCAST_PLATFORMS = [
   {
     id: 'youtube',
     name: 'YouTube',
-    icon: '/src/assets/youtube.png',
+    icon: '/src/assets/Youtube.png',
     logo: '/src/assets/mini-youtube.svg',
     url: 'https://youtube.com',
     width: 94,

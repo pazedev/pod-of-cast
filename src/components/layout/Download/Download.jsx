@@ -1,7 +1,5 @@
-import { PiGooglePodcastsLogoBold } from 'react-icons/pi'
-import { SiSpotify } from 'react-icons/si'
-import { FaYoutube } from 'react-icons/fa'
 import { SubscribeButton } from '../../UI/SubscribeButton.jsx'
+import { PODCAST_PLATFORMS } from '../../../constants/platforms.js'
 
 export default function DownloadSection() {
   return (
@@ -39,33 +37,20 @@ export default function DownloadSection() {
             Content also available on:
           </p>
           <div className="flex justify-center gap-5">
-            <a
-              href="https://podcasts.google.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Avaliable on Google Podcast"
-            >
-              <PiGooglePodcastsLogoBold
-                size={24}
-                className="social-platforms-icons"
-              />
-            </a>
-            <a
-              href="https://spotify.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Avaliable on Spotify"
-            >
-              <SiSpotify size={24} className="social-platforms-icons" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Avaliable on Youtube"
-            >
-              <FaYoutube size={24} className="social-platforms-icons" />
-            </a>
+            {PODCAST_PLATFORMS.map(Item => (
+              <a
+                href={Item.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={Item.label}
+                id={Item.id}
+              >
+                <Item.Logo
+                  className="social-platforms-icons"
+                  size={Item.logoWidth}
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>

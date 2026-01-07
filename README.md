@@ -6,7 +6,7 @@
 
 ## 🎯 Sobre o projeto
 
-Pod of Cast é um site mobile-first que simula uma plataforma de podcasts criada para exercitar design responsivo, microinterações, animações e otimização de performance. Desenvolvido por 4 devs front-end em início de carreira, este projeto reproduz dinâmicas reais de ambiente corporativo. Aplicamos Git Flow profissional, metodologias ágeis (Scrum) e comunicação técnica.
+Pod of Cast é um site mobile-first que simula uma plataforma de podcasts criada para exercitar design responsivo, microinterações, animações e otimização de performance. Desenvolvido por 4 devs front-end em início de carreira, este projeto reproduz dinâmicas reais de ambiente corporativo. Aplicamos GitHub Flow profissional, metodologias ágeis (Scrum) e comunicação técnica.
 
 ### Design e adaptação mobile
 
@@ -19,10 +19,10 @@ Pod of Cast é um site mobile-first que simula uma plataforma de podcasts criada
 
 | Tecnologia             | Justificativa                                                                                    |
 | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| **React 19**           | Praticar APIs mais recentes (server components, novos hooks)                                     |
-| **Vite 7.2**           | Build 10x mais rápido que CRA, essencial para ciclos de feedback ágeis                          |
-| **Tailwind CSS 4.1**   | Utility-first para prototipação rápida + config centralizada mantém consistência                |
-| **Framer Motion** | Para dominar animações performáticas (GPU acceleration, 60fps)     |
+| **React 19**           | Praticar features mais recentes (server components, novos hooks)                                     |
+| **Vite 7.2**           | Build mais rápido que CRA (bom para ciclos de feedback ágeis)                          |
+| **Tailwind CSS 4.1**   | Utility-first para prototipação rápida + config centralizada para manter consistência                |
+| **Framer Motion** | Para dominar animações performáticas (scroll, microinterações, transições)     |
 | **Lucide React**       | Ícones com tree-shaking automático                                                              |
 | **ESLint + Prettier**  | Formatação automática reduz friction em code review                                             |
 
@@ -41,12 +41,10 @@ Pod of Cast é um site mobile-first que simula uma plataforma de podcasts criada
 
 **Scrum Master rotativo:** Cada sprint uma pessoa diferente facilita cerimônias e remove impedimentos (desenvolve liderança técnica).
 
-### Git Flow
+### GitHub Flow
 
 ```
-main (protegida, deploy automático)
-  ↑
-develop (branch de integração)
+main (branch principal para integração, deploy automático)
   ↑
 feature/nome-da-feature (branches individuais)
 ```
@@ -70,9 +68,11 @@ feature/nome-da-feature (branches individuais)
       <sub>Front-end Developer</sub>
     </td>
     <td align="center">
-      <sub><b>Emilly</b></sub><br />
+      <a href="https://github.com/emilly-ksalmeida">
+        <img src="https://github.com/emilly-ksalmeida.png" width="100px;" alt="Emilly K S Almeida"/><br />
+        <sub><b>Emilly K S Almeida</b></sub>
+      </a><br />
       <sub>Front-end Developer</sub><br />
-      <sub><i>GitHub em construção</i></sub>
     </td>
     <td align="center">
       <a href="https://github.com/isabelli-mocci">
@@ -82,9 +82,11 @@ feature/nome-da-feature (branches individuais)
       <sub>Front-end Developer</sub>
     </td>
     <td align="center">
-      <sub><b>Nicoly</b></sub><br />
-      <sub>Front-end Developer</sub><br />
-      <sub><i>GitHub em construção</i></sub>
+        <a href="https://github.com/nicolyz">
+        <img src="https://github.com/nicolyz.png" width="100px;" alt="Nicoly Santos"/><br />
+        <sub><b>Nicoly Santos</b></sub>
+        </a><br />
+        <sub>Front-end Developer</sub><br />
     </td>
   </tr>
 </table>
@@ -103,6 +105,6 @@ Nos conhecemos na **trilha de aprendizagem do programa "Elas+ Tech" promovido pe
 
 **Feito com ☕ e muita dedicação por 4 devs que escolheram aprender fazendo**
 
-[⬆ Voltar ao topo](#pod-of-cast)
+[⬆ Voltar ao topo](#-pod-of-cast)
 
 </div>

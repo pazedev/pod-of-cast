@@ -1,6 +1,6 @@
 <div align="center">
-
-# 🎙️ Pod of Cast
+  
+<img width="1920" height="800" alt="Project Preview  Github (1920 x 800 px)" src="https://github.com/user-attachments/assets/78e50d0b-11bc-405d-869c-66edcebaf4ef" />
 
 </div>
 
@@ -20,6 +20,7 @@ Pod of Cast é um site mobile-first que simula uma plataforma de podcasts criada
 | Tecnologia             | Justificativa                                                                                    |
 | ---------------------- | ------------------------------------------------------------------------------------------------ |
 | **React 19**           | Praticar features mais recentes (server components, novos hooks)                                     |
+| **JavaScript** | Necessário para manipular o DOM, comunicar com APIs e implementar a lógica do projeto |
 | **Vite 7.2**           | Build mais rápido que CRA (bom para ciclos de feedback ágeis)                          |
 | **Tailwind CSS 4.1**   | Utility-first para prototipação rápida + config centralizada para manter consistência                |
 | **Framer Motion** | Para dominar animações performáticas (scroll, microinterações, transições)     |

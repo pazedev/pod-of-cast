@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import logo from '../../../assets/logo.png'
 import { SubscribeButton } from '../../UI/SubscribeButton'
 
@@ -6,8 +6,110 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMoreOpen, setIsMoreOpen] = useState(false)
 
+  const moreButtonRef = useRef(null)
+  const moreMenuRef = useRef(null)
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggleMore = () => {
+    setIsMoreOpen(prev => !prev)
+  }
+
+  // Close the dropdown when clicking outside or pressing Escape. Manage arrow-key navigation inside the menu.
+  useEffect(() => {
+    function onDocumentClick(e) {
+      if (!isMoreOpen) return
+      if (
+        moreMenuRef.current &&
+        !moreMenuRef.current.contains(e.target) &&
+        moreButtonRef.current &&
+        !moreButtonRef.current.contains(e.target)
+      ) {
+        setIsMoreOpen(false)
+      }
+    }
+
+    function onKeyDown(e) {
+      if (e.key === 'Escape') {
+        setIsMoreOpen(false)
+        moreButtonRef.current?.focus()
+      }
+    }
+
+    if (isMoreOpen) {
+      // Use pointerdown for better touch/pointer support and keep mousedown as a fallback
+      document.addEventListener('pointerdown', onDocumentClick)
+      document.addEventListener('mousedown', onDocumentClick)
+      document.addEventListener('keydown', onKeyDown)
+
+      // Focus first item when opening (use role selector and requestAnimationFrame to ensure it's mounted)
+      const first =
+        moreMenuRef.current?.querySelector('[role="menuitem"]') ?? null
+      if (first) {
+        requestAnimationFrame(() => first.focus())
+      }
+    }
+
+    return () => {
+      document.removeEventListener('pointerdown', onDocumentClick)
+      document.removeEventListener('mousedown', onDocumentClick)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [isMoreOpen])
+
+  const handleMoreKeyDown = e => {
+    const items = moreMenuRef.current
+      ? Array.from(moreMenuRef.current.querySelectorAll('[role="menuitem"]'))
+      : []
+    if (!items.length) return
+
+    const currentIndex = items.indexOf(document.activeElement)
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      const next = items[(currentIndex + 1) % items.length]
+      next.focus()
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      const prev = items[(currentIndex - 1 + items.length) % items.length]
+      prev.focus()
+    } else if (e.key === 'Home') {
+      e.preventDefault()
+      items[0].focus()
+    } else if (e.key === 'End') {
+      e.preventDefault()
+      items[items.length - 1].focus()
+    } else if (e.key === 'Tab') {
+      // If tabbing out of the menu, close it
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (!e.shiftKey && document.activeElement === last) {
+        setIsMoreOpen(false)
+      } else if (e.shiftKey && document.activeElement === first) {
+        setIsMoreOpen(false)
+      }
+    }
+  }
+
+  const handleMoreButtonKeyDown = e => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setIsMoreOpen(true)
+      requestAnimationFrame(() =>
+        moreMenuRef.current?.querySelector('[role="menuitem"]')?.focus()
+      )
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setIsMoreOpen(true)
+      requestAnimationFrame(() => {
+        const items = Array.from(
+          moreMenuRef.current?.querySelectorAll('[role="menuitem"]') ?? []
+        )
+        items[items.length - 1]?.focus()
+      })
+    }
   }
 
   return (
@@ -39,8 +141,15 @@ export function Navbar() {
             {/* Dropdown "More" */}
             <div className="relative">
               <button
-                onClick={() => setIsMoreOpen(!isMoreOpen)}
+                id="more-button"
+                ref={moreButtonRef}
+                onClick={toggleMore}
+                onKeyDown={handleMoreButtonKeyDown}
+                aria-haspopup="true"
+                aria-expanded={isMoreOpen}
+                aria-controls="more-menu"
                 className="flex items-center text-davys-grey hover:text-vermillion transition-colors duration-200 font-medium cursor-pointer"
+                type="button"
               >
                 More
                 <svg
@@ -59,22 +168,39 @@ export function Navbar() {
               </button>
 
               {isMoreOpen && (
-                <div className="absolute top-full left-0 -mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                <div
+                  id="more-menu"
+                  ref={moreMenuRef}
+                  role="menu"
+                  aria-labelledby="more-button"
+                  aria-hidden={!isMoreOpen}
+                  onKeyDown={handleMoreKeyDown}
+                  className="absolute top-full left-0 -mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+                >
                   <a
                     href="/hosts"
+                    role="menuitem"
+                    tabIndex={0}
                     className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"
+                    onClick={() => setIsMoreOpen(false)}
                   >
                     Hosts
                   </a>
                   <a
                     href="/contact"
+                    role="menuitem"
+                    tabIndex={0}
                     className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"
+                    onClick={() => setIsMoreOpen(false)}
                   >
                     Contact
                   </a>
                   <a
                     href="/faq"
+                    role="menuitem"
+                    tabIndex={0}
                     className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"
+                    onClick={() => setIsMoreOpen(false)}
                   >
                     FAQ
                   </a>
@@ -167,7 +293,7 @@ export function Navbar() {
             Contact
           </a>
 
-          <div className="flex flex-col lg:hidden items-center px-4 pt-2 gap-4 items-start">
+          <div className="flex flex-col lg:hidden px-4 pt-2 gap-4 items-start">
             <SubscribeButton text="RECENT EPISODES" variant="outlineNavbar" />
             <SubscribeButton text="SUBSCRIBE" variant="navbar" />
           </div>

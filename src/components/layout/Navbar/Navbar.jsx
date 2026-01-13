@@ -12,7 +12,7 @@ export function Navbar() {
 
   return (
     <nav className="navbar text-davys-grey mt-6">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12">
+      <div className="w-full px-10 md:px-20">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -59,7 +59,7 @@ export function Navbar() {
               </button>
 
               {isMoreOpen && (
-                <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                <div className="absolute top-full left-0 -mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
                   <a
                     href="/hosts"
                     className="block px-4 py-2 text-davys-grey hover:bg-vermillion hover:text-white"

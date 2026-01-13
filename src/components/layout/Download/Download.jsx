@@ -6,13 +6,13 @@ export default function DownloadSection() {
     <div className="flex flex-col lg:flex-row items-center justify-center h-[816px] border-b border-davys-grey bg-alice-blue relative">
       <img
         src="/src/assets/scribble-icon-red.png"
-        alt="Imagem de uma linha vermelha"
+        alt=""
         className="absolute -translate-y-100 h-[123px] lg:h-[150px]"
       />
       <div className="hidden lg:block overflow-hidden lg:w-1/3 h-full">
         <img
           src="/src/assets/vector-1.png"
-          alt="Imagem ilustrativa de uma tela de celular"
+          alt="Preview of Pod of Cast app available for download"
           className="w-[410px] max-w-none -translate-x-2/6 translate-y-3/6 xl:-translate-x-1/6 xl:w-[450px]"
         />
       </div>
@@ -58,7 +58,7 @@ export default function DownloadSection() {
       <div className="overflow-hidden w-full lg:w-1/3 lg:h-full">
         <img
           src="/src/assets/vector-2.png"
-          alt="Imagem ilustrativa de uma tela de celular"
+          alt="Preview of Pod of Cast app available for download"
           className="ml-auto lg:translate-x-2/6 lg:translate-y-1/6 lg:max-w-none lg:w-[550px]"
         />
       </div>

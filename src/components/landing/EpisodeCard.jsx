@@ -48,10 +48,10 @@ export function EpisodeCard({ episode, index }) {
         className="absolute top-3 right-3 z-10 flex gap-2 items-center"
         aria-label="Available on:"
       >
-        {PODCAST_PLATFORMS.map(({ id, name, logo, icon }) => (
+        {PODCAST_PLATFORMS.map(({ id, name, logo, iconLogo }) => (
           <img
             key={id}
-            src={logo ?? icon}
+            src={logo ?? iconLogo}
             alt={name}
             title={`Available on ${name}`}
             className="object-contain p-1 w-8 h-8"

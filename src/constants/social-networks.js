@@ -1,23 +1,33 @@
 /**
  * Links de redes sociais
  */
+import { FaTwitter } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FaTiktok } from 'react-icons/fa6'
+
 export const SOCIAL_NETWORKS = [
   {
     id: 'twitter',
     name: 'Twitter',
     url: 'https://twitter.com',
-    icon: '/src/assets/twitter.png',
+    Icon: FaTwitter,
+    label: 'Abrir Twitter',
+    size: 24,
   },
   {
     id: 'instagram',
     name: 'Instagram',
     url: 'https://instagram.com',
-    icon: '/src/assets/instagram.png',
+    Icon: FaInstagram,
+    label: 'Abrir Instagram',
+    size: 24,
   },
   {
     id: 'tiktok',
     name: 'TikTok',
     url: 'https://tiktok.com',
-    icon: '/src/assets/tiktok.png',
+    Icon: FaTiktok,
+    label: 'Abrir TikTok',
+    size: 24,
   },
 ]

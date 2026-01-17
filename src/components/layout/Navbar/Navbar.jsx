@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import Logo from '../Logo'
 import { SubscribeButton } from '../../UI/SubscribeButton'
@@ -8,6 +8,7 @@ import { NAV_LINKS, MORE_LINKS } from '../../../constants/index.js'
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const mobileMenuRef = useRef(null)
   const {
     isOpen: isMoreOpen,
     setIsOpen: setIsMoreOpen,
@@ -17,8 +18,38 @@ export function Navbar() {
     handleButtonKeyDown,
   } = useDropdown()
 
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    const handleEscape = event => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false)
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('keydown', handleEscape)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [isMenuOpen])
+
   return (
-    <nav className="navbar bg-champagne text-davys-grey pt-6">
+    <nav
+      ref={mobileMenuRef}
+      className="navbar bg-champagne text-davys-grey pt-6 relative z-50"
+    >
       <div className="w-full px-4 sm:px-8 md:px-10 lg:px-20">
         <div className="flex justify-between items-center h-16">
           <div className="shrink-0">
@@ -73,7 +104,7 @@ export function Navbar() {
 
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isMenuOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-[600px] opacity-100 mt-6' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-6 pt-2 pb-4 space-y-3">

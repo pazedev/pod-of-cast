@@ -1,4 +1,4 @@
-import { PODCAST_PLATFORMS } from '../constants/platforms'
+import { PODCAST_PLATFORMS } from '../constants/index.js'
 
 export default function PlatformLinks() {
   return (

@@ -14,7 +14,7 @@
   --font-base-font: 'Montserrat Alternates', sans-serif;
 
   /* Custom font sizes - Mobile */
-  --text-size-display-mobile: 4rem; /* 64px */
+  --text-size-display-mobile: 4.5rem; /* 72px */
   --text-size-h1-mobile: 2.5rem; /* 40px */
   --text-size-h2-mobile: 1.25rem; /* 20px */
   --text-size-h3-mobile: 1rem; /* 16px */
@@ -38,31 +38,31 @@
   /* === Typography === */
 
   .text-display {
-    @apply font-bold leading-none text-size-display-mobile sm:text-[--text-size-display];
+    @apply font-bold leading-none text-size-display-mobile lg:text-size-display;
     letter-spacing: var(--tracking-tight);
   }
 
   .text-h1 {
-    @apply font-bold leading-tight text-size-h1-mobile sm:text-[--text-size-h1];
+    @apply font-bold leading-tight text-size-h1-mobile sm:text-size-h1;
     letter-spacing: var(--tracking-tight);
   }
 
   .text-h2-style-1 {
-    @apply font-bold leading-none text-size-h2-mobile sm:text-[--text-size-h2];
+    @apply font-bold leading-none text-size-h2-mobile sm:text-size-h2;
     letter-spacing: var(--tracking-default);
   }
 
   .text-h2-style-2 {
-    @apply font-bold leading-snug text-size-h2-mobile sm:text-[--text-size-h2];
+    @apply font-bold leading-snug text-size-h2-mobile sm:text-size-h2;
     letter-spacing: var(--tracking-default);
   }
 
   .text-h3-style-1 {
-    @apply font-medium leading-relaxed tracking-normal text-size-h3-mobile sm:text-[--text-size-h3];
+    @apply font-medium leading-relaxed tracking-normal text-size-h3-mobile sm:text-size-h3;
   }
 
   .text-h3-style-2 {
-    @apply font-bold leading-snug text-size-h3-mobile sm:text-[--text-size-h3];
+    @apply font-bold leading-snug text-size-h3-mobile sm:text-size-h3;
     letter-spacing: var(--tracking-default);
   }
 

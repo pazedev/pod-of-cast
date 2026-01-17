@@ -3,31 +3,31 @@
 @import 'tailwindcss';
 
 @theme {
-  /* === Paleta de Cores === */
+  /* === Color Palette === */
   --color-davys-grey: #4d4d4d;
   --color-vermillion: #cd4631;
   --color-pewter-blue: #81adc8;
   --color-champagne: #f7ede8;
   --color-alice-blue: #edf3f7;
 
-  /* === Tipografia === */
+  /* === Typography === */
   --font-base-font: 'Montserrat Alternates', sans-serif;
 
-  /* Tamanhos de fonte customizados - Mobile */
-  --text-size-display-mobile: 4.5rem;
-  --text-size-h1-mobile: 2.5rem;
-  --text-size-h2-mobile: 1.25rem;
-  --text-size-h3-mobile: 1rem;
+  /* Custom font sizes - Mobile */
+  --text-size-display-mobile: 4rem; /* 64px */
+  --text-size-h1-mobile: 2.5rem; /* 40px */
+  --text-size-h2-mobile: 1.25rem; /* 20px */
+  --text-size-h3-mobile: 1rem; /* 16px */
 
-  /* Tamanhos de fonte customizados */
-  --text-size-display: 6rem;
-  --text-size-h1: 3.70625rem;
-  --text-size-h2: 2.290625rem;
-  --text-size-h3: 1.415625rem;
+  /* Custom font sizes */
+  --text-size-display: 6rem; /* 96px */
+  --text-size-h1: 3.70625rem; /* 59.3px */
+  --text-size-h2: 2.290625rem; /* 36.65px */
+  --text-size-h3: 1.415625rem; /* 22.65px */
 
-  /* Espaçamento de letras customizados */
-  --tracking-tight: -0.025em;
-  --tracking-default: -0.0125em;
+  /* Custom letter spacing */
+  --tracking-tight: -0.04em; /* -4% */
+  --tracking-default: -0.02em; /* -2% */
 }
 
 :root {
@@ -35,51 +35,62 @@
 }
 
 @layer base {
-  /* === Tipografia === */
+  /* === Typography === */
 
   .text-display {
-    @apply font-bold leading-none text-size-display-mobile sm:text-size-display;
+    @apply font-bold leading-none text-size-display-mobile sm:text-[--text-size-display];
     letter-spacing: var(--tracking-tight);
   }
+
   .text-h1 {
-    @apply font-bold leading-tight text-size-h1-mobile sm:text-size-h1;
+    @apply font-bold leading-tight text-size-h1-mobile sm:text-[--text-size-h1];
     letter-spacing: var(--tracking-tight);
   }
+
   .text-h2-style-1 {
-    @apply font-bold text-size-h2-mobile leading-none sm:text-size-h2;
+    @apply font-bold leading-none text-size-h2-mobile sm:text-[--text-size-h2];
     letter-spacing: var(--tracking-default);
   }
+
   .text-h2-style-2 {
-    @apply font-bold leading-snug text-size-h2-mobile sm:text-size-h2;
+    @apply font-bold leading-snug text-size-h2-mobile sm:text-[--text-size-h2];
     letter-spacing: var(--tracking-default);
   }
+
   .text-h3-style-1 {
-    @apply font-medium leading-relaxed tracking-normal text-size-h3-mobile sm:text-size-h3;
+    @apply font-medium leading-relaxed tracking-normal text-size-h3-mobile sm:text-[--text-size-h3];
   }
+
   .text-h3-style-2 {
-    @apply font-bold leading-snug text-size-h3-mobile sm:text-size-h3;
+    @apply font-bold leading-snug text-size-h3-mobile sm:text-[--text-size-h3];
     letter-spacing: var(--tracking-default);
   }
+
   .text-body-medium {
     @apply text-base font-medium leading-relaxed tracking-normal;
   }
+
   .text-body-bold {
     @apply text-base font-bold leading-relaxed tracking-normal;
   }
+
   .text-caption-medium {
     @apply text-sm font-medium leading-relaxed tracking-normal;
   }
+
   .text-caption-bold {
     @apply text-sm font-bold leading-relaxed tracking-normal;
   }
+
   .text-small-medium {
     @apply text-xs font-medium leading-relaxed tracking-normal;
   }
+
   .text-small-bold {
     @apply text-xs font-bold leading-relaxed tracking-normal;
   }
 
-  /* === Botões === */
+  /* === Buttons === */
 
   .button-black {
     @apply px-6 py-2 text-sm font-bold rounded-lg border-2 border-black cursor-pointer shadow-[6px_6px_0_0_rgba(0,0,0,0.25)] transition-all duration-200 active:translate-y-1 active:shadow-none uppercase tracking-wide bg-black text-white hover:bg-transparent hover:text-black;
@@ -90,14 +101,13 @@
   }
 
   .social-platforms-icons {
-    @apply text-black hover:text-vermillion transition-colors
-    duration-200 ease-in-out;
+    @apply text-black hover:text-vermillion transition-colors duration-200 ease-in-out;
   }
 
-  /* === Elementos Globais === */
+  /* === Global Elements === */
 
   a {
-    @apply text-black hover:text-vermillion transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400  focus-visible:ring-offset-2;
+    @apply text-black hover:text-vermillion transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2;
   }
 
   strong {

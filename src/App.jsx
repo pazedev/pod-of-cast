@@ -1,7 +1,6 @@
 import { Navbar } from './components/layout/Navbar/Navbar'
 import { LandingPage } from './pages/Landing/LandingPage'
 import { Footer } from './components/layout/Footer/Footer'
-import { SubscribeButton } from './components/UI/SubscribeButton'
 import DownloadSection from './components/layout/Download/Download.jsx'
 
 function App() {
@@ -10,9 +9,6 @@ function App() {
       <main>
         <Navbar />
         <LandingPage />
-        <div className="flex justify-center py-8">
-          <SubscribeButton text="Subscribe" />
-        </div>
         <DownloadSection />
       </main>
       <Footer />

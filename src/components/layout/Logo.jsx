@@ -1,4 +1,4 @@
-import { BRANDING } from '../../constants/branding'
+import { BRANDING } from '../../constants/index.js'
 
 export default function Logo({
   size = BRANDING.logo.defaultSize,

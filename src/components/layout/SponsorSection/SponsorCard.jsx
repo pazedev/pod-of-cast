@@ -4,7 +4,7 @@ import { SubscribeButton } from '../../UI/SubscribeButton'
 export default function SponsorCard({ content, emphasis }) {
   return (
     <div className="flex gap-5">
-      <div className="flex flex-col items-center gap-5 w-[373px] h-[480px] sm:h-[689px]">
+      <div className="flex flex-col items-center gap-5 w-[373px] min-h-[480px]">
         <div
           className={clsx(
             'flex flex-col justify-between border-[1.5px] rounded-lg px-10 pt-10 pb-8 w-[373px] h-[480px] sm:pt-15 sm:h-[312px]',

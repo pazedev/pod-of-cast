@@ -1,4 +1,4 @@
-import { BECOME_SPONSOR } from '../../../constants/sponsor'
+import { BECOME_SPONSOR } from '../../../constants/index'
 import SponsorCard from './SponsorCard'
 
 export function SponsorSection() {
@@ -10,11 +10,11 @@ export function SponsorSection() {
           Get exclusive episodes, merch and more
         </h3>
       </div>
-      <div className="flex flex-wrap gap-5">
+      <section className="flex flex-wrap gap-5">
         {BECOME_SPONSOR.map(content => (
           <SponsorCard content={content} emphasis={content.emphasis} />
         ))}
-      </div>
+      </section>
     </div>
   )
 }

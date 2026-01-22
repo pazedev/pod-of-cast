@@ -9,8 +9,10 @@ export function SponsorSection() {
         alt=""
         className="absolute z-0 -translate-x-54 -translate-y-8 w-[60px] sm:-translate-x-80 sm:-translate-y-16 sm:w-[120px]"
       />
-      <div className="flex flex-col gap-5 w-[623px] h-[127px]">
-        <h1 className="text-h1 text-center">Become our sponsor</h1>
+      <div className="flex flex-col gap-5 h-[127px]">
+        <h1 className="text-h1 text-center whitespace-nowrap">
+          Become our sponsor
+        </h1>
         <h3 className="text-h3-style-1 text-center text-davys-grey">
           Get exclusive episodes, merch and more
         </h3>

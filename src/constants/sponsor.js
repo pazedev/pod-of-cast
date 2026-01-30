@@ -39,7 +39,7 @@ export const BECOME_SPONSOR = [
       'Exclusive Badge on Livestreaming',
       'Become an Official Sponsor',
       'Early Access to All Episodes',
-      'Free Stikers and Merch',
+      'Free Stickers and Merch',
     ],
     emphasis: false,
   },

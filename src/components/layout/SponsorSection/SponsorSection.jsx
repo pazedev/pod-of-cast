@@ -1,5 +1,5 @@
 import { BECOME_SPONSOR } from '../../../constants/index'
-import SponsorCard from './SponsorCard'
+import { SponsorCard } from './SponsorCard'
 
 export function SponsorSection() {
   return (
@@ -19,7 +19,7 @@ export function SponsorSection() {
       </div>
       <section className="flex flex-wrap gap-5 relative z-10">
         {BECOME_SPONSOR.map(content => (
-          <SponsorCard content={content} emphasis={content.emphasis} />
+          <SponsorCard key={content.tiers} content={content} />
         ))}
       </section>
       <img

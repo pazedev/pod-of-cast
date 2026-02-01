@@ -1,5 +1,5 @@
 /**
- * Plataformas de podcast onde os episódios estão disponíveis
+ * Podcast Platforms Constants
  */
 import { PiGooglePodcastsLogoBold } from 'react-icons/pi'
 import { SiSpotify } from 'react-icons/si'
@@ -42,7 +42,7 @@ export const PODCAST_PLATFORMS = [
 ]
 
 /**
- * Lojas de aplicativos onde o app pode ser baixado
+ * App Stores Constants
  */
 export const APP_STORES = [
   {

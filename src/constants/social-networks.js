@@ -1,8 +1,7 @@
 /**
- * Links de redes sociais
+ * Social Networks Constants
  */
-import { FaTwitter } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
+import { FaTwitter, FaInstagram } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa6'
 
 export const SOCIAL_NETWORKS = [

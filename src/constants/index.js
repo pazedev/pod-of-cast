@@ -1,7 +1,8 @@
 /**
- * Ponto central de exportação de todas as constantes da aplicação
+ * Constants Exports
  */
 export * from './branding'
+export * from './decorations'
 export * from './episodes'
 export * from './navigation'
 export * from './platforms'

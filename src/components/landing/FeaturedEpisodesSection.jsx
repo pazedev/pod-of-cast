@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { EPISODES } from '../../constants/episodes'
+import { EPISODES } from '../../constants/index'
 import { useIsMobile } from '../../hooks/useIsMobile'
 import { useCarousel } from '../../hooks/useCarousel'
 import { EpisodeCard } from './EpisodeCard'

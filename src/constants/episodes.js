@@ -1,3 +1,6 @@
+/**
+ * Episodes Constants
+ */
 import perplexedMind from '../assets/episodes/perplexed-mind.png'
 import socialClass from '../assets/episodes/social-class.png'
 import selfConfidence from '../assets/episodes/self-confidence.png'

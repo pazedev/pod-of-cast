@@ -1,5 +1,5 @@
 import { SubscribeButton } from '../../UI/SubscribeButton.jsx'
-import { PODCAST_PLATFORMS } from '../../../constants/platforms.js'
+import { PODCAST_PLATFORMS } from '../../../constants/index.js'
 
 export default function DownloadSection() {
   return (
@@ -22,15 +22,15 @@ export default function DownloadSection() {
           BETA
         </span>
         <div className="flex flex-col items-center gap-5">
-          <h1 className="w-86 text-h1 text-center sm:w-140">
+          <h1 className="text-h1 text-center w-86 sm:w-140">
             Available now Pod of Cast App
           </h1>
-          <h3 className="text-h3-style-1 text-center">
+          <h3 className="text-h3-style-1 text-center text-davys-grey">
             We just launched our podcast app!
           </h3>
         </div>
 
-        <SubscribeButton text="Download now" />
+        <SubscribeButton text="Download now" variant="mobile" />
 
         <div className="flex flex-col gap-2.5">
           <p className="text-caption-medium text-davys-grey text-center">

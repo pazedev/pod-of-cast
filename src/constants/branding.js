@@ -1,5 +1,5 @@
 /**
- * Informações de marca e identidade visual
+ * Branding Constants
  */
 export const BRANDING = {
   logo: {

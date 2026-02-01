@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
-import { PODCAST_PLATFORMS } from '../../constants/platforms'
+import { PODCAST_PLATFORMS } from '../../constants/index'
 
 const MotionArticle = motion.article
 
 export function EpisodeCard({ episode, index }) {
   const handleClick = () => {
-    // TODO: Implementar navegação para a página do episódio
+    // TODO: Implement navigation to episode details page
     console.log('Episode clicked:', episode.id)
   }
 

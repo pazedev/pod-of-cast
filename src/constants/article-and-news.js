@@ -1,38 +1,44 @@
+import { formatDate } from '../utils/formatDate'
+
 export const ARTICLE_AND_NEWS = [
   {
-    titulo: 'Setup your own podcast',
-    categoria: 'podcast',
-    resumo:
+    title: 'Setup your own podcast',
+    category: 'podcast',
+    summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel iam, quis nostrud exercitation ullamco laboris...',
-    data: 'Sep 14, 2021',
+    date: formatDate('2021-09-14'),
     tags: ['business', 'startup'],
-    imagemCapa: '/src/assets/articles/setup-your-own-podcast.png',
+    coverImage: '/src/assets/articles/setup-your-own-podcast.png',
+    alt: 'The image shows microphones and headphones arranged for podcast recording, typically used in a studio setting for capturing audio conversations or interviews.',
   },
   {
-    titulo: 'Doodle artwork 101',
-    categoria: 'TIPS & TRICK',
-    resumo:
+    title: 'Doodle artwork 101',
+    category: 'TIPS & TRICK',
+    summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel iam, quis nostrud exercitation ullamco laboris...',
-    data: 'Sep 12, 2021',
+    date: formatDate('2021-09-12'),
     tags: ['art', 'creative', 'tips and trick'],
-    imagemCapa: '/src/assets/articles/doodle-artwork-101.png',
+    coverImage: '/src/assets/articles/doodle-artwork-101.png',
+    alt: 'The image shows a doodle artwork with various artistic elements and patterns.',
   },
   {
-    titulo: 'Mother Nature Taking Over',
-    categoria: 'NEWS',
-    resumo:
+    title: 'Mother Nature Taking Over',
+    category: 'NEWS',
+    summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel iam, quis nostrud exercitation ullamco laboris... ',
-    data: 'Sep 10, 2021',
+    date: formatDate('2021-09-10'),
     tags: ['news', 'nature'],
-    imagemCapa: '/src/assets/articles/mother-nature-taking-over.png',
+    coverImage: '/src/assets/articles/mother-nature-taking-over.png',
+    alt: 'The image shows a scene of nature reclaiming an urban area, with plants and greenery growing over buildings and streets.',
   },
   {
-    titulo: 'How to Be Productive',
-    categoria: 'PRODUCTIVITY',
-    resumo:
+    title: 'How to Be Productive',
+    category: 'PRODUCTIVITY',
+    summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel iam, quis nostrud exercitation ullamco laboris...',
-    data: 'Sep 10, 2021',
+    date: formatDate('2021-09-10'),
     tags: ['productivity', 'mindset'],
-    imagemCapa: '/src/assets/articles/how-to-be-productive.png',
+    coverImage: '/src/assets/articles/how-to-be-productive.png',
+    alt: 'The image shows a person sitting at a desk with a laptop, surrounded by productivity tools and resources, such as a calendar, to-do list, and motivational quotes.',
   },
 ]

@@ -1,4 +1,5 @@
 import { Hero } from '../../components/landing/Hero'
+import { ArticleAndNewsSection } from '../../components/layout/ArticleAndNewsSection/ArticleAndNewsSection'
 import { SponsorSection } from '../../components/layout/SponsorSection/SponsorSection'
 /* 
 Import statements for other sections that are currently commented out:
@@ -16,14 +17,13 @@ export function LandingPage() {
       <main>
         <Hero />
         <SponsorSection />
+        <ArticleAndNewsSection />
 
         {/* 
         <TalkListenSection />
         <WhatListenersSay />
         <MembershipBenefits />
         <RecentEpisodesSection />
-        
-        <ArticlesAndNews />
         */}
       </main>
     </>

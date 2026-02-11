@@ -24,7 +24,7 @@ export function ArticleAndNewsSection() {
       <section className="flex flex-wrap gap-5 relative z-10">
         {ARTICLE_AND_NEWS.map((article, index) => {
           if (browse || index < 2) {
-            return <CardArticleAndNew key={index} article={article} />
+            return <CardArticleAndNew key={article.title} article={article} />
           }
         })}
       </section>

@@ -8,6 +8,7 @@ export function CardArticleAndNew({ article }) {
         <img
           src={article.coverImage}
           alt={article.alt}
+          loading="lazy"
           className="object-cover"
         />
       </div>
@@ -19,11 +20,11 @@ export function CardArticleAndNew({ article }) {
           </h2>
         </div>
         <p className="text-caption-medium">{article.summary}</p>
-        <div className="flex flex-col gap-2 md:flex-row md:justify-between items-end w-full min-h-[54px] border-t-[0.5px] border-davys-grey">
+        <div className="flex flex-col gap-2 pt-5 md:pt-0 md:flex-row md:justify-between items-end w-full min-h-[54px] border-t-[0.5px] border-davys-grey">
           <div className="flex flex- gap-1.5 text-small-medium">
             {article.tags.map((tag, index) => (
               <span
-                key={index}
+                key={tag + index}
                 className="rounded-sm border border-davys-grey py-1.5 px-3"
               >
                 {tag}

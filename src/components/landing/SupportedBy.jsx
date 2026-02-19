@@ -3,9 +3,9 @@ import spotify from '../../assets/medium-spotify.png'
 import youtube from '../../assets/medium-youtube.png'
 
 const sponsors = [
-  { name: 'Spotify', logo: spotify },
-  { name: 'Google Podcast', logo: googlePodcast },
-  { name: 'Youtube', logo: youtube },
+  { name: 'Spotify', logo: spotify, url: 'https://open.spotify.com'},
+  { name: 'Google Podcast', logo: googlePodcast, url: 'https://podcasts.google.com'},
+  { name: 'Youtube', logo: youtube,  url: 'https://youtube.com'},
 ]
 
 export function SupportedBy() {
@@ -18,12 +18,12 @@ export function SupportedBy() {
           </p>
 
           <div
-            className="flex flex-row items-center gap-[90px]"
-            aria-label="Plataformas que apoiam o podcast"
+            className="flex flex-row items-center gap-[45px]"
+            aria-label="Plataformas que apoiam o podcast (ao clicar abre em nova aba)"
           >
             {sponsors.map(sponsor => (
               <span key={sponsor.name}>
-                <img src={sponsor.logo} alt={`Logo do ${sponsor.name}`} />
+                <img src={sponsor.logo} alt={`Logo do ${sponsor.name}`} href={sponsor.url}/>
               </span>
             ))}
           </div>

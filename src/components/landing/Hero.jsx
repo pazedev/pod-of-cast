@@ -1,6 +1,7 @@
 import { FeaturedEpisodesSection } from './FeaturedEpisodesSection.jsx'
 import { SubscribeButton } from '../UI/SubscribeButton.jsx'
 import { DECORATIONS } from '../../constants/index.js'
+import { SupportedBy} from './SupportedBy.jsx'
 
 export function Hero() {
   return (
@@ -28,6 +29,9 @@ export function Hero() {
       <SubscribeButton text="Subscribe" variant="mobile" />
       <div className="mt-12">
         <FeaturedEpisodesSection />
+      </div>
+      <div className='mt-12'>
+        <SupportedBy/>
       </div>
     </section>
   )

@@ -4,7 +4,7 @@ import { DECORATIONS } from '../../constants/index.js'
 
 export function Hero() {
   return (
-    <section className="hero bg-champagne flex flex-col items-center py-10">
+    <section className="hero bg-champagne flex flex-col items-center py-10 overflow-x-hidden">
       <div className="relative flex justify-center w-full mt-20">
         <img
           src={DECORATIONS.shapeStars}
